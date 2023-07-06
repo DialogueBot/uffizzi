@@ -2,8 +2,8 @@ x-uffizzi:
   ingress:
     service: app
     port: 80
-  continuous-previews:
-    delete_preview_after: 720h
+  # continuous-previews:
+    delete_preview_after: 480h
 services:
   app:
     build: .
