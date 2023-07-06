@@ -3,7 +3,7 @@ x-uffizzi:
     service: app
     port: 80
   continuous_previews:
-    delete_preview_after: 10h
+    delete_preview_after: 720h
 services:
   app:
     build: .
