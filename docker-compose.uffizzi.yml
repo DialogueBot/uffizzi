@@ -21,5 +21,8 @@ services:
       - app
     cap_add:
       - SYS_ADMIN
+    x-uffizzi-continuous_previews:
+      delete_preview_after: 24h
+      
 volumes:
   data:
