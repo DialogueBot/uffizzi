@@ -3,6 +3,12 @@ x-uffizzi:
     service: app
     port: 80
 
+  continuous_previews: 
+    deploy_preview_when_image_tag_is_created: false
+    deploy_preview_when_pull_request_is_opened: false
+    delete_preview_when_pull_request_is_closed: false
+    delete_preview_after: 720h
+
 services:
   app:
     build: .
@@ -22,7 +28,7 @@ services:
 continuous_preview:
   deploy_preview_when_pull_request_is_opened: false
   delete_preview_when_pull_request_is_closed: false
-  delete_preview_in_x_hours: 480
+  delete_preview_in_x_hours: 720
 
 volumes:
   data:
