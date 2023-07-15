@@ -22,7 +22,6 @@ services:
 continuous_preview:
   deploy_preview_when_pull_request_is_opened: false
   delete_preview_when_pull_request_is_closed: false
-  delete_preview_when_pull_request_is_closed: false
   delete_preview_in_x_hours: 480
 
 volumes:
