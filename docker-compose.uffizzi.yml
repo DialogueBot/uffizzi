@@ -3,13 +3,6 @@ x-uffizzi:
     service: app
     port: 80
 
-continuous_preview:
-  deploy_preview_when_pull_request_is_opened: false
-  delete_preview_when_pull_request_is_closed: false
-  delete_preview_when_pull_request_is_closed: false
-  delete_preview_in_x_hours: 24
-  share_to_github: true
-
 services:
   app:
     build: .
@@ -25,6 +18,12 @@ services:
       - app
     cap_add:
       - SYS_ADMIN
-      
+
+continuous_preview:
+  deploy_preview_when_pull_request_is_opened: false
+  delete_preview_when_pull_request_is_closed: false
+  delete_preview_when_pull_request_is_closed: false
+  delete_preview_in_x_hours: 480
+
 volumes:
   data:
